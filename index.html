@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link href="index.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    </head>
+<body>
+    <h1>Weather Dashboard</h1>
+    <div class="topnav" id="myTopnav">
+        <a href="#home" class="active">Home</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+    <div class="container">
+        <div class="weather">
+            <h3>Enter City Name</h3>
+            <input type="text" placeholder="E.g., Pune, Ahmedabad,etc">
+            <button class="search">Search</button>
+            <div class="separator"></div>
+            <button class="location-btn">Use Current Location</button>
+        </div>
+        <div class="weather-info">
+            <div class="current-info">
+                <div class="info">
+                    <h2>Pune , Maharashtra (Monday)</h2>
+                    <h4>Temperature:30.15°C</h4>
+                    <h4>Humidity:79%</h4>
+                </div>
+                <div class="icon">
+                    <img src="animated/cloudy-day-3.svg" alt="weather" width="110%">
+                    <h4>Cloudy</h4>
+                </div>
+            </div>
+            <div class="days">
+                <h2>5-Day Forecast</h2>
+                <ul class="weather-cards">
+                    <li class="card">
+                        <h3>Tuesday</h3>
+                        <img src="animated/cloudy.svg" alt="weather" width="150%">
+                        <h4>Temperature:29.13°C</h4>
+                        <h4>Humidity:50%</h4>
+                    </li>
+                    <li class="card">
+                        <h3>Wednesday</h3>
+                        <img src="animated/day.svg" alt="weather" width="150%">
+                        <h4>Temperature:28.14°C</h4>
+                        <h4>Humidity:80%</h4>
+                    </li>
+                    <li class="card">
+                        <h3>Thrusday</h3>
+                        <img src="animated/cloudy-day-2.svg" alt="weather" width="150%">
+                        <h4>Temperature:35.13°C</h4>
+                        <h4>Humidity:60%</h4>
+                    </li>
+                    <li class="card">
+                        <h3>Friday</h3>
+                        <img src="animated/rainy-2.svg" alt="weather" width="150%">
+                        <h4>Temperature:39.23°C</h4>
+                        <h4>Humidity:30%</h4>
+                    </li>
+                    <li class="card">
+                        <h3>Saturday</h3>
+                        <img src="animated/rainy-7.svg" alt="weather" width="150%">
+                        <h4>Temperature:35.15°C</h4>
+                        <h4>Humidity:90%</h4>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="temperatureMap" style="height: 300px;"></div>
+    <footer class="footer">
+        <div class="footer-container">
+            <ul class="footer-info">
+                <li><a href="#">Terms of Use</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <p>&copy; 2023 Weather Dashboard. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script>
+        function myFunction() {
+          var x = document.getElementById("myTopnav");
+          if (x.className === "topnav") {
+            x.className += " responsive";
+          } else {
+            x.className = "topnav";
+          }
+        }
+        </script>
+        <script src="app.js"></script>
+</body>
+</html>
